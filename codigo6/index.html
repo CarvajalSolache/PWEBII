@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego de Gato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      background-color: #fff;
+    }
+
+    td:hover {
+      background-color: #e6e6e6;
+    }
+
+    /* Líneas internas del tablero */
+    td {
+      border: 3px solid #333;
+    }
+
+    /* Quitar bordes exteriores */
+    tr:first-child td {
+      border-top: none;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td:first-child {
+      border-left: none;
+    }
+
+    td:last-child {
+      border-right: none;
+    }
+
+    #reiniciar {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #reiniciar:hover {
+      background-color: #555;
+    }
+    #turno {
+        font-size: 1.4em;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Juego de Gato</h1>
+  <!-- Mensaje de turno -->
+  <h2 id="turno"></h2>
+  <table>
+    <tr>
+      <td id="c1"></td>
+      <td id="c2"></td>
+      <td id="c3"></td>
+    </tr>
+    <tr>
+      <td id="c4"></td>
+      <td id="c5"></td>
+      <td id="c6"></td>
+    </tr>
+    <tr>
+      <td id="c7"></td>
+      <td id="c8"></td>
+      <td id="c9"></td>
+    </tr>
+  </table>
+
+  <button id="reiniciar">Reiniciar</button>
+</body>
+<script src="app.js"></script>
+</html>
